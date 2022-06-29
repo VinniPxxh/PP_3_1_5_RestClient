@@ -38,7 +38,6 @@ public class Communication {
         System.out.println("Set-Cookie: " + set_cookie + "\n");
         List<User> allUsers = responseEntity.getBody();
         return allUsers;
-//        [Set-Cookie:"JSESSIONID=E672E9FF44B42771CF68D42FCE7B2594;
     }
 
     public User getUser(long id) {
