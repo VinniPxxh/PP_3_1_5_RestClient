@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f2bd7c7-759c-4cfd-acf9-ffa19223d21c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/Communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/configuration/MyConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/igorkuznetsov/spring/rest/AppTest.java" afterDir="false" />
+    <list default="true" id="1f2bd7c7-759c-4cfd-acf9-ffa19223d21c" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/Communication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igorkuznetsov/spring/rest/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +78,16 @@
       <workItem from="1656433290705" duration="3391000" />
       <workItem from="1656445155898" duration="639000" />
       <workItem from="1656449757467" duration="10194000" />
-      <workItem from="1656503715091" duration="5490000" />
+      <workItem from="1656503715091" duration="8873000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1656509597765</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656509597765</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +103,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
