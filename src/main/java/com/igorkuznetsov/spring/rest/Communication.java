@@ -27,11 +27,11 @@ public class Communication {
     }
 
     public List<User> getAllUsers() {
-        ResponseEntity<List<User>> responseEntity =
-                restTemplate.exchange(URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {
-                });
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+        ResponseEntity<List<User>> responseEntity =
+                restTemplate.exchange(URL, HttpMethod.GET, entity, new ParameterizedTypeReference<List<User>>() {
+                });
         responseEntity.getHeaders().get("Set-Cookie");
         String set_cookie = headers.getFirst(headers.SET_COOKIE);
         System.out.println("Response: " + responseEntity + "\n");
@@ -46,9 +46,8 @@ public class Communication {
     }
 
     public void addUser(User user) {
-        headers.add("Cookie", "credentials" + user);
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<User> entity = new HttpEntity<User>(user, headers);
+        HttpEntity<User> entity = new HttpEntity<>(user, headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(URL, HttpMethod.POST, entity, String.class);
         responseEntity.getHeaders();
         System.out.println(responseEntity.getStatusCode());
@@ -57,9 +56,8 @@ public class Communication {
     }
 
     public void updateUser(User user) {
-        headers.add("Cookie", "credentials" + user);
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<User> entity = new HttpEntity<User>(user, headers);
+        HttpEntity<User> entity = new HttpEntity<>(user, headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(URL, HttpMethod.PUT, entity, String.class);
         responseEntity.getHeaders();
         System.out.println(responseEntity.getStatusCode());
@@ -68,9 +66,8 @@ public class Communication {
     }
 
     public void deleteUser(User user, long id) {
-        headers.add("Cookie", "credentials" + user);
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<User> entity = new HttpEntity<User>(user, headers);
+        HttpEntity<User> entity = new HttpEntity<>(user, headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(URL + "/" + id,
                 HttpMethod.DELETE, entity, String.class);
         responseEntity.getHeaders();
