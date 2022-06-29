@@ -32,10 +32,7 @@ public class Communication {
         ResponseEntity<List<User>> responseEntity =
                 restTemplate.exchange(URL, HttpMethod.GET, entity, new ParameterizedTypeReference<List<User>>() {
                 });
-        responseEntity.getHeaders().get("Set-Cookie");
-        String set_cookie = headers.getFirst(headers.SET_COOKIE);
-        System.out.println("Response: " + responseEntity + "\n");
-        System.out.println("Set-Cookie: " + set_cookie + "\n");
+        headers.add("Cookie", String.valueOf(responseEntity.getHeaders().getFirst(HttpHeaders.SET_COOKIE)));
         List<User> allUsers = responseEntity.getBody();
         return allUsers;
     }
