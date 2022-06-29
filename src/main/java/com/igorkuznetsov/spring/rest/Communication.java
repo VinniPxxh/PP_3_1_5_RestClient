@@ -34,7 +34,7 @@ public class Communication {
         HttpEntity<String> entity = new HttpEntity<String>(headers);
         responseEntity.getHeaders().get("Set-Cookie");
         String set_cookie = headers.getFirst(headers.SET_COOKIE);
-        System.out.println("Response: " + responseEntity.toString() + "\n");
+        System.out.println("Response: " + responseEntity + "\n");
         System.out.println("Set-Cookie: " + set_cookie + "\n");
         List<User> allUsers = responseEntity.getBody();
         return allUsers;

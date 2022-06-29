@@ -17,19 +17,21 @@ public class App {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
 
         Communication communication = context.getBean("communication", Communication.class);
-        User user = new User(3L, "Thomas", "Shelby", (byte) 25);
+
         /* ** Получение списка пользователей **  */
-//        List<User> allUsers = communication.getAllUsers();
-//        System.out.println(allUsers);
+        List<User> allUsers = communication.getAllUsers();
+        System.out.println(allUsers);
         /* ** Получение одного пользователя(Не работает) **  */
 //        User getUsrById = communication.getUser(1L);
 //        System.out.println(getUsrById);
         /* ** Добавление пользователя **  */
-//        communication.addUser(user);
+        User user = new User(3L, "James", "Brown", (byte) 25);
+        communication.addUser(user);
         /* ** Изменение пользователя **  */
-        communication.updateUser(user);
+        User updUser = new User(3L, "Thomas", "Shelby", (byte) 25);
+        communication.updateUser(updUser);
         /* ** Удаление пользователя ** */
-//        communication.deleteUser(user,3L);
-//        System.out.println(communication.getCode());
+        communication.deleteUser(updUser,3L);
+        System.out.println(communication.getCode());
     }
 }
